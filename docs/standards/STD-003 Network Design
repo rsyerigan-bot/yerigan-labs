@@ -1,0 +1,6 @@
+Every network has a documented purpose.
+Every published port has a documented justification.
+Services communicate over private Docker networks whenever possible.
+Internal communication is preferred over published ports.
+New bridges require architecture documentation.
+Network changes require rollback plans.

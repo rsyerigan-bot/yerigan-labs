@@ -1,0 +1,8 @@
+STD-002 — Security by Design
+
+Default to least privilege.
+Expose only required services.
+Verify before changing.
+Remove unnecessary attack surface.
+Every exposed port must have a documented purpose.
+Every security control must have a recovery plan.

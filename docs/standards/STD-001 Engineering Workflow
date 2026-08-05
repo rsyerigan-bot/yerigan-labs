@@ -1,0 +1,69 @@
+STD-001 — Engineering Workflow
+
+Every infrastructure change shall include:
+
+Before Implementation
+A ticket is created.
+The objective is defined.
+Risks are identified.
+A rollback plan exists.
+During Implementation
+Changes are tested.
+Existing functionality is verified.
+Security impact is considered.
+After Implementation
+Documentation is updated.
+Architecture is updated if applicable.
+Runbook is updated if applicable.
+Decision log is updated if applicable.
+Git commit completed.
+GitHub synchronized.
+Validation
+
+The implementation is not complete until:
+
+Expected functionality works.
+No existing functionality regressed.
+Monitoring remains healthy.
+Recovery procedure is documented.
+
+Every configuration change should answer five questions:
+
+What problem does this solve?
+What could this break?
+How do we verify success?
+How do we roll it back?
+Where is it documented?
+
+# STD-001 — Engineering Workflow
+
+## Core Principles
+
+1. **Keep It Simple**
+   - Prefer the simplest design that safely meets the requirement.
+   - Avoid unnecessary components and exceptions.
+
+2. **Design for Modularity**
+   - Separate systems by function and trust.
+   - Make components independently replaceable and maintainable.
+   - Limit unnecessary dependencies.
+
+3. **Verify and Validate**
+   - Inspect the current state before changing it.
+   - Validate configuration before activation.
+   - Test expected functionality after implementation.
+   - Preserve a rollback path until success is confirmed.
+
+## Required Change Workflow
+
+Every significant infrastructure change should include:
+
+1. Defined objective
+2. Risk assessment
+3. Rollback plan
+4. Incremental implementation
+5. Functional validation
+6. Security validation
+7. Documentation update
+8. Git commit
+9. GitHub synchronization
