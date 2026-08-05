@@ -1,0 +1,21 @@
+services:
+  portainer:
+    image: portainer/portainer-ce:lts
+    container_name: portainer
+
+    # Only expose the HTTPS management interface on Ubuntu's LAN IPv4 address.
+    # Port 8000 is omitted because we are not using Portainer Edge Agents.
+    ports:
+      - "192.168.1.203:9443:9443"
+
+    # Preserve Portainer configuration and connect it to the local Docker engine.
+    volumes:
+      - portainer_data:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+
+    restart: unless-stopped
+
+volumes:
+  portainer_data:
+    # Reuse the volume already attached to the current standalone container.
+    external: true
