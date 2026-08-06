@@ -1,0 +1,17 @@
+services:
+  uptime-kuma:
+    image: louislam/uptime-kuma:latest
+    container_name: uptime-kuma
+
+    volumes:
+      - uptime-kuma-data:/app/data
+
+    restart: unless-stopped
+    networks:
+      - default
+      - proxy
+volumes:
+  uptime-kuma-data:
+networks:
+  proxy:
+    external: true

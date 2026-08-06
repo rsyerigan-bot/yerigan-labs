@@ -1,0 +1,77 @@
+- Infrastructure:
+    - Proxmox:
+        icon: proxmox.png
+        href: https://192.168.1.10:8006
+        description: Virtualization host
+
+    - Ubuntu Server:
+        icon: ubuntu.png
+        description: Docker host
+        ping: 192.168.1.203
+
+    - Portainer:
+        icon: portainer.png
+        href: https://192.168.1.203:9443
+        description: Docker management
+
+    - Pi-hole:
+        icon: pi-hole.png
+        href: http://192.168.1.203:8080/admin
+        description: DNS filtering and ad blocking
+
+    - Uptime Kuma:
+        icon: uptime-kuma.png
+        href: http://192.168.1.203:3001
+        description: Service monitoring
+
+    - Homepage:
+        icon: homepage.png
+        href: http://192.168.1.203:3000
+        description: Homelab operations dashboard
+
+- Monitoring and Security:
+    - Grafana:
+        icon: grafana.png
+        description: Planned metrics dashboards
+
+    - Prometheus:
+        icon: prometheus.png
+        description: Planned metrics collection
+
+    - Wazuh:
+        icon: wazuh.png
+        description: Planned SIEM and endpoint monitoring
+
+    - Splunk:
+        icon: splunk.png
+        description: Planned log analysis lab
+
+    - Nessus:
+        icon: nessus.png
+        description: Planned vulnerability scanning
+
+- Enterprise Lab:
+    - Windows Server:
+        icon: windows-server.png
+        description: Planned domain controller
+
+    - Active Directory:
+        icon: microsoft.png
+        description: Planned identity and access lab
+
+    - Windows 11 Client:
+        icon: windows-11.png
+        description: Planned domain-joined workstation
+
+    - Group Policy:
+        icon: microsoft.png
+        description: Planned policy management
+
+- Storage and Backups:
+    - NAS:
+        icon: synology.png
+        description: Planned shared storage and backups
+
+    - Proxmox Backups:
+        icon: proxmox.png
+        description: Planned VM backup target
