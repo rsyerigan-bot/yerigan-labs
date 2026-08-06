@@ -1,0 +1,20 @@
+{
+	auto_https off
+}
+
+http://home.yerigan.home.arpa {
+	reverse_proxy homepage:3000
+}
+
+http://status.yerigan.home.arpa {
+	reverse_proxy uptime-kuma:3001
+}
+
+http://dns.yerigan.home.arpa {
+	redir / /admin/ 308
+	reverse_proxy pihole:80
+}
+
+http://portainer.yerigan.home.arpa {
+	reverse_proxy portainer:9000
+}

@@ -1,0 +1,23 @@
+services:
+  caddy:
+    image: caddy:2
+
+    container_name: caddy
+
+    restart: unless-stopped
+
+    ports:
+  # Publish only the current HTTP entrance on Ubuntu's LAN IPv4 address.
+    - "192.168.1.203:80:80"
+
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - ./caddy_data:/data
+      - ./caddy_config:/config
+
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    external: true
