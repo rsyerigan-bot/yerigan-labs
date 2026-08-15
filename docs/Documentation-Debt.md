@@ -32,7 +32,8 @@ Documentation debt should trend toward zero.
 | Medium | LAB-005 | Runbook Review | Open | Determine operational recovery need |
 | Medium | LAB-006 | Runbook Review | Open | Determine operational recovery need |
 | Medium | LAB-007 | Runbook Review | Open | Determine operational recovery need |
-
+| Medium | Framework | Interview-Notes Template | Open | Planned template was not created |
+| Medium | Framework | Validation-Checklist Template | Open | Planned template was not created |
 ---
 
 ## Rules
