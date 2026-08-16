@@ -34,6 +34,10 @@ Documentation debt should trend toward zero.
 | Medium | LAB-007 | Runbook Review | Open | Determine operational recovery need |
 | Medium | Framework | Interview-Notes Template | Open | Planned template was not created |
 | Medium | Framework | Validation-Checklist Template | Open | Planned template was not created |
+| High | Security | Router Perimeter Review | Deferred | GFiber management unavailable; review port forwarding, UPnP, IPv6 firewall, DMZ, and remote administration |
+| High | Security | External Exposure Validation | Open | Independently validate externally reachable services |
+| Medium | Security | Home Assistant 8123 Review | Deferred | Determine whether direct LAN access remains required after permanent network deployment |
+| High | Security | Permanent Network Baseline | Deferred | Reassess security controls after move and deployment of permanent router/network |
 ---
 
 ## Rules
