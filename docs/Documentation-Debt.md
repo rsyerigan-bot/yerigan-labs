@@ -38,6 +38,9 @@ Documentation debt should trend toward zero.
 | High | Security | External Exposure Validation | Open | Independently validate externally reachable services |
 | Medium | Security | Home Assistant 8123 Review | Deferred | Determine whether direct LAN access remains required after permanent network deployment |
 | High | Security | Permanent Network Baseline | Deferred | Reassess security controls after move and deployment of permanent router/network |
+| Medium | Monitoring | Additional Host Alerts | Deferred | CPU and memory alert policies intentionally excluded from LAB-010 |
+| Medium | Monitoring | Incident Context Capture | Deferred | Capture system context at alert firing and recovery |
+| Medium | Monitoring | Monitoring Baseline Review | Deferred | Establish normal network and resource baselines after sufficient historical data exists |
 ---
 
 ## Rules
@@ -52,7 +55,7 @@ Documentation debt should trend toward zero.
 
 ## Completed Documentation Debt
 
-None yet.## Completed Documentation Debt
+Completed Documentation Debt
 
 | Lab | Artifact | Completed | Notes |
 |---|---|---|---|

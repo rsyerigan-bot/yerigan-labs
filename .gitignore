@@ -27,3 +27,7 @@ backups/
 .DS_Store
 Thumbs.db
 .vscode/
+
+# Caddy runtime state
+infrastructure/docker/caddy/caddy_data/
+infrastructure/docker/caddy/caddy_config/

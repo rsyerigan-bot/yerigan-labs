@@ -21,3 +21,13 @@ http://portainer.yerigan.home.arpa {
 http://ha.yerigan.home.arpa {
 	reverse_proxy 192.168.1.203:8123
 }
+http://grafana.yerigan.home.arpa {
+	reverse_proxy grafana:3000
+}
+http://caddy {
+	handle /api/webhook/* {
+		reverse_proxy 192.168.1.203:8123
+	}
+
+	respond 404
+}
