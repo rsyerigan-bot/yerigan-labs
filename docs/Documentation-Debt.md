@@ -41,6 +41,9 @@ Documentation debt should trend toward zero.
 | Medium | Monitoring | Additional Host Alerts | Deferred | CPU and memory alert policies intentionally excluded from LAB-010 |
 | Medium | Monitoring | Incident Context Capture | Deferred | Capture system context at alert firing and recovery |
 | Medium | Monitoring | Monitoring Baseline Review | Deferred | Establish normal network and resource baselines after sufficient historical data exists |
+| Medium | Logging | UFW Log Collection | Deferred | Add host firewall events as a separate evidence source |
+| Medium | Logging | Caddy Access Logging | Deferred | Add HTTP access evidence after centralized logging foundation is validated |
+| Medium | Logging | Logging Capacity Review | Deferred | Review Loki storage growth and 30-day retention after sufficient historical data exists |
 ---
 
 ## Rules

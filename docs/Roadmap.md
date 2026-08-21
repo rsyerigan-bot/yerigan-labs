@@ -40,9 +40,9 @@ Automation
 
 Enterprise
 
-□ Logging
+✓ Logging
 
-□ Monitoring
+✓ Monitoring
 
 □ Vulnerability Management
 
