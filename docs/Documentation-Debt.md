@@ -12,28 +12,6 @@ Documentation debt should trend toward zero.
 
 | Priority | Lab | Missing Artifact | Status | Notes |
 |---|---|---|---|---|
-| Medium | LAB-001 | Interview Notes | Open | Backfill |
-| Medium | LAB-002 | Interview Notes | Open | Backfill |
-| Medium | LAB-003 | Interview Notes | Open | Backfill |
-| Medium | LAB-004 | Interview Notes | Open | Backfill |
-| Medium | LAB-005 | Interview Notes | Open | Backfill |
-| Medium | LAB-006 | Interview Notes | Open | Backfill |
-| Medium | LAB-007 | Interview Notes | Open | Backfill |
-| Medium | LAB-001 | OI Review | Open | Determine whether an OI is required |
-| Medium | LAB-002 | OI Review | Open | Determine whether an OI is required |
-| Medium | LAB-003 | OI Review | Open | Determine whether an OI is required |
-| Medium | LAB-004 | OI Review | Open | Determine whether an OI is required |
-| Medium | LAB-005 | OI Review | Open | Determine whether an OI is required |
-| Medium | LAB-006 | OI Review | Open | Determine whether an OI is required |
-| Medium | LAB-007 | OI Review | Open | Determine whether an OI is required |
-| Medium | LAB-002 | Runbook Review | Open | Determine operational recovery need |
-| Medium | LAB-003 | Runbook Review | Open | Determine operational recovery need |
-| Medium | LAB-004 | Runbook Review | Open | Determine operational recovery need |
-| Medium | LAB-005 | Runbook Review | Open | Determine operational recovery need |
-| Medium | LAB-006 | Runbook Review | Open | Determine operational recovery need |
-| Medium | LAB-007 | Runbook Review | Open | Determine operational recovery need |
-| Medium | Framework | Interview-Notes Template | Open | Planned template was not created |
-| Medium | Framework | Validation-Checklist Template | Open | Planned template was not created |
 | High | Security | Router Perimeter Review | Deferred | GFiber management unavailable; review port forwarding, UPnP, IPv6 firewall, DMZ, and remote administration |
 | High | Security | External Exposure Validation | Open | Independently validate externally reachable services |
 | Medium | Security | Home Assistant 8123 Review | Deferred | Determine whether direct LAN access remains required after permanent network deployment |
@@ -58,9 +36,32 @@ Documentation debt should trend toward zero.
 
 ## Completed Documentation Debt
 
-Completed Documentation Debt
-
 | Lab | Artifact | Completed | Notes |
 |---|---|---|---|
 | LAB-006 | Engineering Journal | Yes | Infrastructure-as-Code migration documented |
 | LAB-007 | Engineering Journal | Yes | Home Platform foundation documented |
+| LAB-001–007 | OI Applicability Review | Yes | Reviewed; no additional OIs required for these labs |
+| LAB-002 | Runbook Applicability Review | Yes | Reviewed; no recurring operational recovery procedure required |
+| LAB-005 | Runbook Applicability Review | Yes | Reviewed; credential recovery covered by RB-009; backup/restore remains separate deferred engineering work |
+| LAB-006 | Runbook Applicability Review | Yes | Reviewed; no recurring operational recovery procedure required |
+| LAB-007 | Runbook Applicability Review | Yes | Reviewed; no recurring operational recovery procedure required |
+| Framework | Interview-Notes Template | Yes | Template created for future and retrospective interview documentation |
+| Framework | Validation-Checklist Template | Yes | Template created for repeatable validation documentation |
+| LAB-003 | Security / Firewall Verification & Recovery Runbook | Yes | RB-003 created for evidence-based firewall and service-exposure troubleshooting |
+| LAB-004 | Caddy Troubleshooting & Recovery Runbook | Yes | RB-004 created for layered reverse-proxy troubleshooting and recovery |
+| LAB-001 | Interview Notes | Yes | Retrospective interview notes created from available project evidence |
+| LAB-002 | Interview Notes | Yes | Retrospective interview notes created from available project evidence |
+| LAB-003 | Interview Notes | Yes | Retrospective interview notes created from available project evidence |
+| LAB-004 | Interview Notes | Yes | Retrospective interview notes created from available project evidence |
+| LAB-005 | Interview Notes | Yes | Retrospective interview notes created from available project evidence |
+| LAB-006 | Interview Notes | Yes | Retrospective interview notes created from available project evidence |
+| LAB-007 | Interview Notes | Yes | Retrospective interview notes created from available project evidence |
+| LAB-008 | Interview Notes | Yes | Existing abbreviated notes normalized to current retrospective interview-note standard |
+| LAB-009 | Interview Notes | Yes | Retrospective interview notes created from presence-confidence evidence and documented limitations |
+| LAB-010 | Interview Notes | Yes | Retrospective interview notes created from observability, LVM, alerting, and notification evidence |
+| LAB-011 | Interview Notes | Yes | Retrospective interview notes created from centralized logging and ingestion-validation evidence |
+| LAB-012 | Interview Notes | Yes | Retrospective interview notes created from authorized vulnerability-validation evidence |
+| LAB-008–012 | Runbook Applicability Review | Yes | Reviewed; existing operational runbooks retained where recurring procedures exist; no additional runbook required for LAB-009 or LAB-012 |
+| LAB-008–012 | OI Applicability Review | Yes | Reviewed; OI-008 remains useful; additional OIs would duplicate engineering or validation documentation |
+| LAB-008–012 | Validation Artifact Review | Yes | Existing tickets and engineering records contain sufficient validation evidence; standalone retrospective validation checklists not required |
+| LAB-008–012 | Documentation Mapping Review | Yes | Artifact relationships reviewed by project content rather than assuming LAB and ENG sequence numbers match |
