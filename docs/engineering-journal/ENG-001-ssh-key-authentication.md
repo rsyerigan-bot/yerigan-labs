@@ -36,6 +36,7 @@ The private key is never sent to the server.
 
 ```powershell
 ssh-keygen -t ed25519 -C "Randall Homelab"
+```
 
 Command breakdown:
 

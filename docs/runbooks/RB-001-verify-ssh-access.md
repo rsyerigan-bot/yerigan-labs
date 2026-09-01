@@ -10,13 +10,14 @@ From Windows PowerShell:
 
 ```powershell
 ssh ubuntu-lab
+```
 
 Expected behavior:
 
 The client requests the private-key passphrase.
 The session opens as randy.
 The Ubuntu account password is not requested.
-Confirm Identity
+## Confirm Identity
 
 On Ubuntu:
 
@@ -27,7 +28,7 @@ Expected values:
 
 randy
 ubuntu
-Review Effective SSH Security Settings
+## Review Effective SSH Security Settings
 sudo sshd -T | grep -E \
 'pubkeyauthentication|passwordauthentication|kbdinteractiveauthentication|permitrootlogin'
 
@@ -37,19 +38,19 @@ pubkeyauthentication yes
 passwordauthentication no
 kbdinteractiveauthentication no
 permitrootlogin no
-Validate Configuration Syntax
+## Validate Configuration Syntax
 sudo sshd -t
 
 Success produces no output.
 
 Do not reload SSH if an error is returned.
 
-Reload SSH Safely
+## Reload SSH Safely
 sudo systemctl reload ssh
 
 Reload rereads configuration without intentionally terminating existing sessions.
 
-Test Password Rejection
+## Test Password Rejection
 
 From Windows PowerShell:
 
@@ -60,7 +61,7 @@ ssh -o PubkeyAuthentication=no `
 Expected result:
 
 Permission denied (publickey).
-Recovery Procedure
+## Recovery Procedure
 
 If normal key authentication fails:
 
@@ -88,7 +89,7 @@ sudo grep -RniE \
 'PubkeyAuthentication|PasswordAuthentication|KbdInteractiveAuthentication|PermitRootLogin' \
 /etc/ssh/sshd_config /etc/ssh/sshd_config.d
 Correct the problem, validate with sshd -t, then reload SSH.
-Emergency Rollback
+## Emergency Rollback
 
 From the Proxmox console, temporarily rename the hardening file:
 
@@ -102,37 +103,3 @@ sudo sshd -t
 sudo systemctl reload ssh
 
 This may restore settings from other SSH configuration files. Review effective settings before relying on password access.
-
-
-## Commit the documentation
-
-After saving all three files:
-
-```bash
-git status
-
-Review the actual content being added:
-
-git diff --check
-git diff --stat
-
-git diff --check looks for whitespace errors. git diff --stat summarizes changed files.
-
-Stage them:
-
-git add docs/
-
-Review the staged snapshot:
-
-git diff --staged --stat
-
-Commit:
-
-git commit -m "Document SSH authentication and recovery"
-
-Verify:
-
-git log --oneline --decorate -2
-git status
-
-You should have two commits and a clean working tree. This is now real, persistent project documentation—not just an idea buried in our conversation.

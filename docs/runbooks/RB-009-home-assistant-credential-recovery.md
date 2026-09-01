@@ -24,3 +24,4 @@ Before beginning:
 
 ```bash
 docker exec -it homeassistant bash
+```

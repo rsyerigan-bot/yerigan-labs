@@ -61,6 +61,7 @@ Home LAN: 192.168.1.0/24
            Interface: ens18
            Addressing: Static IPv4
            The Proxmox host is connected through a Google Mesh node using Ethernet.
+```
 
 The environment currently uses a flat home network. VLANs and security segmentation are planned but have not yet been implemented.
 
