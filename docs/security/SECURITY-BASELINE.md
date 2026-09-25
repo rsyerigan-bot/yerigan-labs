@@ -2,7 +2,7 @@
 
 ## Status
 
-Current baseline established following LAB-009.
+Current baseline reviewed September 25, 2026 following migration to the permanent home network.
 
 This document describes validated controls and known limitations. It must not be interpreted as proof that the environment is Internet-inaccessible.
 
@@ -55,7 +55,7 @@ Purpose: LAN DNS.
 
 Controls:
 
-- Docker publishing bound to `192.168.1.203`.
+- Docker publishing bound to `192.168.4.203`.
 - Trusted LAN firewall rules.
 
 ### Caddy — TCP/80
@@ -64,7 +64,7 @@ Purpose: Internal reverse proxy.
 
 Controls:
 
-- Bound to `192.168.1.203`.
+- Bound to `192.168.4.203`.
 - Trusted LAN firewall rule.
 
 ### Home Assistant — TCP/8123
@@ -111,7 +111,7 @@ No host port currently published.
 
 ### Router
 
-Not verified due to temporary GFiber management failure.
+Perimeter controls require formal validation on the current eero network.
 
 Review:
 
@@ -125,13 +125,13 @@ Review:
 
 Independent external port validation remains outstanding.
 
-### Permanent Network
+### Network Segmentation
 
-Security baseline must be reviewed after relocation and deployment of the permanent router/network.
+The permanent home network is now deployed on `192.168.4.0/22`. VLAN, IoT, camera, guest, and infrastructure segmentation remain future work.
 
 ### Home Assistant Direct Access
 
-Review whether direct TCP/8123 LAN access remains necessary after the permanent reverse-proxy and Companion App architecture is established.
+Review whether direct TCP/8123 LAN access remains necessary now that Caddy provides the normal friendly-name access path.
 
 ## Review Triggers
 

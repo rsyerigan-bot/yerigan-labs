@@ -1,32 +1,32 @@
 - Infrastructure:
     - Proxmox:
         icon: proxmox.png
-        href: https://192.168.1.10:8006
+        href: https://192.168.4.10:8006
         description: Virtualization host
 
     - Ubuntu Server:
         icon: ubuntu.png
         description: Docker host
-        ping: 192.168.1.203
+        ping: 192.168.4.203
 
     - Portainer:
         icon: portainer.png
-        href: https://192.168.1.203:9443
+        href: http://portainer.yerigan.home.arpa
         description: Docker management
 
     - Pi-hole:
         icon: pi-hole.png
-        href: http://192.168.1.203:8080/admin
+        href: http://dns.yerigan.home.arpa
         description: DNS filtering and ad blocking
 
     - Uptime Kuma:
         icon: uptime-kuma.png
-        href: http://192.168.1.203:3001
+        href: http://status.yerigan.home.arpa
         description: Service monitoring
 
     - Homepage:
         icon: homepage.png
-        href: http://192.168.1.203:3000
+        href: http://home.yerigan.home.arpa
         description: Homelab operations dashboard
 
 - Monitoring and Security:

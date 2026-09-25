@@ -53,7 +53,7 @@ Confirm routing:
 
 Expected LAN address for the current environment:
 
-    192.168.1.203
+    192.168.4.203
 
 If the host address has changed, investigate addressing before modifying firewall rules.
 
@@ -86,7 +86,7 @@ Pay attention to:
 
 A listener on 127.0.0.1 is local-only.
 
-A listener on 192.168.1.203 is bound to the LAN IPv4 address.
+A listener on 192.168.4.203 is bound to the LAN IPv4 address.
 
 A listener on 0.0.0.0 or [::] is broadly bound and requires additional firewall and exposure review.
 
@@ -128,9 +128,9 @@ Test expected LAN access from another trusted LAN device.
 
 Examples from Windows PowerShell:
 
-    Test-NetConnection 192.168.1.203 -Port 22
-    Test-NetConnection 192.168.1.203 -Port 80
-    Test-NetConnection 192.168.1.203 -Port 8123
+    Test-NetConnection 192.168.4.203 -Port 22
+    Test-NetConnection 192.168.4.203 -Port 80
+    Test-NetConnection 192.168.4.203 -Port 8123
 
 Only test ports that are relevant to the service being investigated.
 

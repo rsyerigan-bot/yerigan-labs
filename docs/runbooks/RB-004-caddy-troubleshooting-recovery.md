@@ -16,7 +16,7 @@ This runbook applies to the current internal reverse-proxy architecture:
     Friendly DNS name
       |
       v
-    192.168.1.203:80
+    192.168.4.203:80
       |
       v
     Caddy
@@ -31,7 +31,7 @@ This runbook applies to the current internal reverse-proxy architecture:
 
 Caddy is the primary internal HTTP entry point and is published on:
 
-    192.168.1.203:80
+    192.168.4.203:80
 
 Current documented routes include:
 
@@ -39,7 +39,7 @@ Current documented routes include:
     status.yerigan.home.arpa     -> uptime-kuma:3001
     dns.yerigan.home.arpa        -> pihole:80
     portainer.yerigan.home.arpa  -> portainer:9000
-    ha.yerigan.home.arpa         -> 192.168.1.203:8123
+    ha.yerigan.home.arpa         -> 192.168.4.203:8123
     grafana.yerigan.home.arpa    -> grafana:3000
 
 The internal `http://caddy` site also proxies Home Assistant webhook traffic to the host on TCP/8123.
@@ -117,7 +117,7 @@ Use the actual affected hostname when troubleshooting another service.
 
 The expected current destination is:
 
-    192.168.1.203
+    192.168.4.203
 
 If the hostname does not resolve correctly, investigate DNS before modifying Caddy.
 
@@ -127,7 +127,7 @@ A DNS failure is not evidence that the reverse proxy itself is broken.
 
 From Windows PowerShell:
 
-    Test-NetConnection 192.168.1.203 -Port 80
+    Test-NetConnection 192.168.4.203 -Port 80
 
 If TCP/80 cannot be reached:
 
@@ -273,11 +273,11 @@ Home Assistant currently differs from most proxied services.
 
 The documented route is:
 
-    ha.yerigan.home.arpa -> 192.168.1.203:8123
+    ha.yerigan.home.arpa -> 192.168.4.203:8123
 
 Caddy also proxies internal webhook requests to:
 
-    192.168.1.203:8123
+    192.168.4.203:8123
 
 Home Assistant therefore depends on host-level TCP/8123 access in the current architecture rather than only Docker service-name resolution.
 
