@@ -1,0 +1,42 @@
+GRC-001 Evidence Record
+Evidence ID: EV-001
+Subject: vmbr1 Host-Side Isolation Validation
+
+Commands executed on the Proxmox host:
+
+grep -A8 -B2 'iface vmbr1' /etc/network/interfaces
+ip link show master vmbr1
+ip route
+
+Observed configuration:
+
+auto vmbr1
+iface vmbr1 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#RED isolated network
+
+Observed bridge-member state:
+
+No active bridge-member interfaces were returned at the time of validation.
+
+Observed routing state:
+
+The Proxmox host routing table contained the default route and connected home-LAN route through vmbr0.
+
+No route through vmbr1 was present.
+
+Assessment:
+
+The Proxmox host configuration defines vmbr1 as a virtual bridge with no physical bridge ports.
+
+No host-side IPv4 address or route exists through vmbr1.
+
+This evidence supports the design assertion that vmbr1 is an isolated cyber-range Layer-2 network and does not provide a host-configured routed or physically bridged path to the normal home LAN.
+
+Limitations:
+
+This validation confirms the Proxmox host-side bridge and routing configuration.
+
+It does not independently prove the absence of guest-level forwarding if a future cyber-range VM becomes multi-homed or is configured to route traffic between networks.
